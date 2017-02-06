@@ -29,11 +29,11 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #121;
 }
 
 .active {
-    background-color: #666;
+    background-color: #555;
 }
 </style>
 <script src='dwr/interface/ReportDAO.js'></script>
