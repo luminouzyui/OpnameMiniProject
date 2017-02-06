@@ -13,7 +13,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #555;
+    background-color: #666;
 }
 
 li {
@@ -33,7 +33,7 @@ li a:hover {
 }
 
 .active {
-    background-color: #5491f2;
+    background-color: #666;
 }
 </style>
 <script src='dwr/interface/ReportDAO.js'></script>
