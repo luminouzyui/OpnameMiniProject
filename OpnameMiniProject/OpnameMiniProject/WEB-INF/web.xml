@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>OpnameMiniProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+
+  <servlet>
+  	<servlet-name>dwr-invoker</servlet-name>
+  	<servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+  	<init-param>
+  		<param-name>debug</param-name>
+  		<param-value>true</param-value>
+  	</init-param>
+  </servlet>
+  <servlet>
+  	<servlet-name>Transaction</servlet-name>
+  	<jsp-file>/WEB-INF/jsp/Transaction.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditProducts</servlet-name>
+  	<jsp-file>/WEB-INF/jsp/EditProducts.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>Audittrail</servlet-name>
+  	<jsp-file>/WEB-INF/jsp/Audittrail.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>Report</servlet-name>
+  	<jsp-file>/WEB-INF/jsp/Report.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>dwr-invoker</servlet-name>
+  	<url-pattern>/dwr/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Transaction</servlet-name>
+  	<url-pattern>/Transaction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditProducts</servlet-name>
+  	<url-pattern>/EditProducts</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Audittrail</servlet-name>
+  	<url-pattern>/Audittrail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Report</servlet-name>
+  	<url-pattern>/Report</url-pattern>
+  </servlet-mapping>
+</web-app>

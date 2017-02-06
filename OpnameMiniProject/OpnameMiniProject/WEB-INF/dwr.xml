@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- daftarin semua codingan td buat mapping dwr nya supaya bisa dipake di javascript-->
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+<dwr>
+	<allow>
+		<convert converter="bean" match="com.ace.opname.beans.MsProductBean">
+			<param name="include" value="productId,productName,description,sellPrice,stockId,quantity,buyPrice,buyDate"/>
+		</convert>
+		<convert converter="bean" match="com.ace.opname.beans.CashierMessageBean"/>
+		
+		<create creator="new" javascript="MsProductDAO" class="com.ace.opname.DAO.MsProductDAO">
+			<include method="getProductById"/>
+			<include method="insertProduct"/>
+			<include method="updateProduct"/>			
+			<include method="initProductTable"/>
+		</create>
+		<create creator="new" javascript="ReportDAO" class="com.ace.opname.DAO.ReportDAO">
+			<include method="getProfitReporting"/>
+		</create>
+		<create creator="new" javascript="TransactionDAO" class="com.ace.opname.DAO.TransactionDAO">		
+			<include method="onloadCashier"/>
+			<include method="updateCart"/>
+			<include method="removeFromCart"/>
+			<include method="insertToTrans"/>			
+		</create>
+	</allow>
+</dwr>
