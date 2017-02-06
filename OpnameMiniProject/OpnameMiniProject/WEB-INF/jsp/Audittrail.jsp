@@ -53,7 +53,6 @@ li a:hover {
 	<table border=1>
 			<tr>
 				<td>Product Id</td>
-				<td>Stock Id</td>
 				<td>Stock Before</td>
 				<td>Stock After</td>
 				<td>Date Changed</td>
