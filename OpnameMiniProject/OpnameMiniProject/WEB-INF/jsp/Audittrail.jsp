@@ -33,7 +33,7 @@ li a:hover {
 }
 
 .active {
-    background-color: #5491f2;
+    background-color: #555555;
 }
 </style>
 <script src='dwr/engine.js'></script>
