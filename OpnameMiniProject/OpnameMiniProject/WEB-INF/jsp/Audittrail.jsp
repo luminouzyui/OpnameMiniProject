@@ -65,7 +65,6 @@ li a:hover {
 	%>
 			<tr>
 				<td><%= mb.getProductid() %></td>
-				<td><%= mb.getStockId() %></td>
 				<td><%= mb.getStockBefore() %></td>
 				<td><%= mb.getStockAfter() %></td>
 				<td><%= mb.getDateChanged().toString() %></td>
